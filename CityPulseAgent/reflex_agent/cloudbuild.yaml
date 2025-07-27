@@ -1,0 +1,27 @@
+steps:
+  # Build and push the Docker image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "gcr.io/$PROJECT_ID/reflex-agent:latest",
+        "-f",
+        "reflex_agent/Dockerfile",
+        ".",
+      ]
+    dir: "reflex_agent"
+
+  # Push to Google Container Registry
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/$PROJECT_ID/reflex-agent:latest"]
+
+  # Deploy to GKE
+  - name: "gcr.io/cloud-builders/gke-deploy"
+    args:
+      - "run"
+      - "--filename=kubernetes/reflex-agent-deployment.yaml"
+      - "--filename=kubernetes/services.yaml"
+      - "--cluster=disaster-agents-cluster"
+      - "--location=us-central1"
+      - "--namespace=disaster-agents"

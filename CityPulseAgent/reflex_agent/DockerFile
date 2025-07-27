@@ -1,0 +1,32 @@
+# Use official Python runtime as a parent image
+FROM python:3.9-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    libgl1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements file first to leverage Docker cache
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application files
+COPY reflex_agent.py .
+COPY bengaluru_grid.json .
+COPY citypulseapp-5e012-firebase-adminsdk-fbsvc-50db401ae6.json .
+
+# Set environment variables
+ENV FLASK_APP=reflex_agent.py
+ENV FLASK_ENV=production
+ENV PYTHONUNBUFFERED=1
+
+# Expose the port the app runs on
+EXPOSE 5000
+
+# Use Gunicorn as the production WSGI server
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "2", "reflex_agent:app"]
