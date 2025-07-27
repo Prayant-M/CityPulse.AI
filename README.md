@@ -324,19 +324,3 @@ npx react-native start --reset-cache
 
 ### React Agent Resources
 - [React Agent Patterns](https://reactjs.org/docs/thinking-in-react.html) - Best practices for agent-based React components
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-**Prayant M** - [@Prayant-M](https://github.com/Prayant-M)
-
-Project Link: [https://github.com/Prayant-M/CityPulse.AI](https://github.com/Prayant-M/CityPulse.AI)
-
----
-
-**🎉 Welcome to CityPulse.AI!**
-
-Experience the future of intelligent city monitoring and management. 🌆✨
