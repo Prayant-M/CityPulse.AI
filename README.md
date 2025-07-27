@@ -2,7 +2,7 @@
 
 Building CityPulse, an agentic application that provides a live, synthesized, and intelligent view of the city.
 
-🌐 **Live Demo**: [citypulseapp-5e012.firebaseapp.com](https://citypulseapp-5e012.firebaseapp.com/)
+🌐 **Live Demo of Admin Dashboard**: [citypulseapp-5e012.firebaseapp.com](https://citypulseapp-5e012.firebaseapp.com/)
 
 ## About
 
