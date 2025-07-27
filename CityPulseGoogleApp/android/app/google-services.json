@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "893499848636",
+    "project_id": "citypulseapp-5e012",
+    "storage_bucket": "citypulseapp-5e012.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893499848636:android:de7f7ee4a8f54089915db9",
+        "android_client_info": {
+          "package_name": "com.citypulsegoogleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893499848636-h1i593mq4dhpm97ia2oobtcetkq1qmga.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.citypulsegoogleapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "893499848636-tmkqde787fbfgc3h082jnl6imubguat9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "xxxx"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893499848636-tmkqde787fbfgc3h082jnl6imubguat9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

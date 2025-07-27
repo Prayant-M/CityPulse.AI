@@ -1,0 +1,65 @@
+/* Map Component Styles */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.map-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f8f9fa;
+}
+
+.map-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f8f9fa;
+  color: #dc3545;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Info Window Custom Styles */
+.gm-style .gm-style-iw-c {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.gm-style .gm-style-iw-t::after {
+  background: linear-gradient(45deg, white 50%, transparent 50%) !important;
+}
+
+/* Dashboard Panel Styles */
+.dashboard-panel {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cell-stats {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.cell-stats .stat-label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.cell-stats .stat-value {
+  color: #6c757d;
+}
+
+/* Grid cell hover effects */
+.map-grid-cell {
+  transition: all 0.2s ease-in-out;
+}
+
+.map-grid-cell:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+}
